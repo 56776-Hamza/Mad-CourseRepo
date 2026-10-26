@@ -11,8 +11,14 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: const Color(0xFFE0E0E0), // Silver header
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.close_rounded, color: Colors.black87),
-          onPressed: () => Navigator.pushReplacementNamed(context, '/'),
+          icon: const Icon(Icons.arrow_back, color: Colors.black87),
+          onPressed: () {
+            if (Navigator.canPop(context)) {
+              Navigator.pop(context); // Take back to navigation page
+            } else {
+              Navigator.pushReplacementNamed(context, '/');
+            }
+          },
         ),
         title: const Text(
           'HAMZA RAHIM',
