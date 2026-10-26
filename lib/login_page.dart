@@ -123,6 +123,22 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
+              const SizedBox(height: 16),
+
+              // Navigation Role Switcher Button
+              TextButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/navigation');
+                },
+                icon: const Icon(Icons.alt_route_rounded, color: Color(0xFF757575)),
+                label: const Text(
+                  'Role Navigation Demo (Admin/User)',
+                  style: TextStyle(
+                    color: Color(0xFF757575),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
