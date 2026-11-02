@@ -23,10 +23,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hero Animation'),
+        title: const Text('Hero Animation Gallery'),
         backgroundColor: Colors.green,
       ),
-
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -40,16 +39,24 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              child: const Hero(
+              child: Hero(
                 tag: 'paint-icon',
-                child: Icon(
-                  Icons.format_paint,
-                  color: Colors.green,
-                  size: 80,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    'assets/image1.jpg',
+                    width: 120,
+                    height: 160,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => const Icon(
+                      Icons.format_paint,
+                      color: Colors.green,
+                      size: 80,
+                    ),
+                  ),
                 ),
               ),
             ),
-
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -59,12 +66,21 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              child: const Hero(
+              child: Hero(
                 tag: 'clock-icon',
-                child: Icon(
-                  Icons.add_alarm,
-                  color: Colors.green,
-                  size: 80,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    'assets/image2.jpg',
+                    width: 120,
+                    height: 160,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => const Icon(
+                      Icons.add_alarm,
+                      color: Colors.green,
+                      size: 80,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -82,23 +98,26 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Screen'),
+        title: const Text('Black Kurta Detail'),
         backgroundColor: Colors.green,
       ),
-
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
-            Hero(
-              tag: 'paint-icon',
-              child: Icon(
+        child: Hero(
+          tag: 'paint-icon',
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              'assets/image1.jpg',
+              width: 320,
+              height: 480,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => const Icon(
                 Icons.format_paint,
                 color: Colors.green,
                 size: 220,
               ),
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -112,23 +131,26 @@ class DetailPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Screen'),
+        title: const Text('Blue Kurta Detail'),
         backgroundColor: Colors.green,
       ),
-
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
-            Hero(
-              tag: 'clock-icon',
-              child: Icon(
+        child: Hero(
+          tag: 'clock-icon',
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              'assets/image2.jpg',
+              width: 320,
+              height: 480,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => const Icon(
                 Icons.add_alarm,
                 color: Colors.green,
                 size: 220,
               ),
             ),
-          ],
+          ),
         ),
       ),
     );
