@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController(text: '123456');
 
   void _handleLogin() {
-    Navigator.pushReplacementNamed(context, '/profile');
+    Navigator.pushReplacementNamed(context, '/bottombar');
   }
 
   @override

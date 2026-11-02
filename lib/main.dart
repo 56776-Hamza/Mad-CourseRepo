@@ -3,6 +3,7 @@ import 'login_page.dart';
 import 'profile_page.dart';
 import 'navigation.dart';
 import 'animation.dart';
+import 'bottombarnaviagation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => const ProfilePage(),
         '/navigation': (context) => const NavigationPage(),
         '/animation': (context) => const HomePage(),
+        '/bottombar': (context) => const BottomBarNavigationPage(),
       },
     );
   }
