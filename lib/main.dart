@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'login_page.dart';
 import 'profile_page.dart';
 import 'navigation.dart';
+import 'animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginPage(),
         '/profile': (context) => const ProfilePage(),
         '/navigation': (context) => const NavigationPage(),
+        '/animation': (context) => const HomePage(),
       },
     );
   }
